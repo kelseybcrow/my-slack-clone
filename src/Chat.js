@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import StarBorderIcon from '@mui/icons-material/StarBorder'
 import InfoIcon from '@mui/icons-material/Info'
 import Message from './Message'
+import ChatInput from './ChatInput'
 
 function Chat() {
     const { roomId } = useParams()
@@ -54,6 +55,11 @@ function Chat() {
                     />
                 ))}
             </div>
+
+            <ChatInput
+                channelName={roomDetails?.name}
+                channelId={roomDetails?.roomId}
+            />
         </div>
     )
 }
